@@ -13,12 +13,6 @@ public class TopicService {
 	
 		@Autowired
 		private TopicRepository topicRepository;
-	
-		List<Topic> topics = new ArrayList<>(Arrays.asList(
-				new Topic("spring","the spring framework","spring framework description"),
-				new Topic("java","core java","Core java Description"),
-				new Topic("JSON","JSON for dummies","JSON for dummies description")
-				));
 		
 		public List<Topic> getAllTopics() {
 			List<Topic> topics = new ArrayList<>();
@@ -41,10 +35,11 @@ public class TopicService {
 		public void updateTopic(String id, Topic topic) {
 			topicRepository.save(topic);
 			//update db with topic
+			//uses primary key to indentify topic
 		}
 
 		public void deleteTopic(String id) {
-			topics.removeIf(t -> t.getId().equals(id));
-			
+//			topics.removeIf(t -> t.getId().equals(id));
+			topicRepository.deleteById(id);
 		}
 }
