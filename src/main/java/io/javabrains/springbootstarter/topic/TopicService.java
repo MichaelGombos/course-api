@@ -16,4 +16,13 @@ public class TopicService {
 		public List<Topic> getAllTopics() {
 			return topics;
 		}
+		
+		public Topic getTopic(String id) {
+			for(Topic topic : topics) {
+				if(topic.getId() == id) {
+					return topic;
+				}
+			}
+			return null;
+		}
 }
