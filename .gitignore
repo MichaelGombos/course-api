@@ -20,3 +20,4 @@ target/
 /nbproject/private/
 /nbbuild/
 /dist/
+target/classes/META-INF/maven/io.javabrains/course-api-data/pom.properties
