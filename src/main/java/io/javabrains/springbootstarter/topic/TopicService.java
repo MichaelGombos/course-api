@@ -18,11 +18,6 @@ public class TopicService {
 		}
 		
 		public Topic getTopic(String id) {
-			for(Topic topic : topics) {
-				if(topic.getId() == id) {
-					return topic;
-				}
-			}
-			return null;
+			return topics.stream().filter(t -> t.getId().equals(id)).findFirst().get();
 		}
 }
