@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>io.javabrains</groupId>
-	<artifactId>course-api-data</artifactId>
+	<artifactId>Java Brains Course API</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>course-api-data</name>
 	<description>Course API with data for Spring Boot</description>
